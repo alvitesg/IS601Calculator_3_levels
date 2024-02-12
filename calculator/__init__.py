@@ -6,22 +6,22 @@ from calculator.operations import add, subtract, multiply, divide
 
 class Calculator:
     @staticmethod
-    def add(num1,num2):
+    def add(a,b):
         """Add numbers and return value"""
-        calculation = Calculation(num1, num2, add)  
+        calculation = Calculation(a, b, add)  
         return calculation.get_result()
     @staticmethod
-    def subtract(num1,num2):
+    def subtract(a,b):
         """Subtract numbers and return value"""
-        calculation = Calculation(num1, num2, subtract)  
+        calculation = Calculation(a, b, subtract)  
         return calculation.get_result()
     @staticmethod
-    def multiply(num1,num2):
+    def multiply(a,b):
         """Multiply numbers and return value"""
-        calculation = Calculation(num1, num2, multiply)  
+        calculation = Calculation(a, b, multiply)  
         return calculation.get_result()
     @staticmethod
-    def divide(num1,num2):
+    def divide(a,b):
         """Divide numbers and return value"""
-        calculation = Calculation(num1, num2, divide)  
+        calculation = Calculation(a, b, divide)  
         return calculation.get_result()

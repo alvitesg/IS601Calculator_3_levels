@@ -1,19 +1,19 @@
 """Module providing basic arithmetic operations."""
 
-def add(num1,num2):
+def add(a,b):
     """Add two numbers, where a and b are numeric and a numeric number is returned"""
-    return num1 + num2
+    return a + b
 
-def subtract(num1,num2):
+def subtract(a,b):
     """Subtract two numbers, where a and b are numeric and a numeric number is returned"""
-    return num1 - num2
+    return a - b
 
-def multiply(num1,num2):
+def multiply(a,b):
     """Multiply two number, where a and b are numeric and a numeric number is returned"""
-    return num1 * num2
+    return a * b
 
-def divide(num1,num2):
+def divide(a,b):
     """Divide two numbers, where a and b are numeric, b must not be zero and a number is returned"""
-    if num2 == 0:
+    if b == 0:
         raise ZeroDivisionError("Division by zero is not allowed.")
-    return num1 / num2
+    return a / b
