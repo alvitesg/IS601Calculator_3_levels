@@ -16,3 +16,13 @@ def test_multiply():
 def test_divide():
     '''Test that division function works'''
     assert divide(2,2) == 1
+
+def test_divide_by_zero():
+    '''Test division by zero'''
+    try:
+        divide(2,0)
+    except ZeroDivisionError:
+        pass
+    else:
+        assert False, "Failed to raise ZeroDivisionError"
+        
