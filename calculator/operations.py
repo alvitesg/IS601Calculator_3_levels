@@ -13,5 +13,5 @@ def multiply(a,b):
 def divide(a,b):
     """Divide two numbers, where a and b are numeric, b must not be zero and a number is returned"""
     if b == 0:
-        raise ValueError("Division by zero is not correct")
+        raise ZeroDivisionError("Division by zero is not allowed.")
     return a / b
