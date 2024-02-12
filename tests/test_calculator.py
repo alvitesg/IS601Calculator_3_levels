@@ -1,11 +1,11 @@
 '''My calculator test'''
 from calculator import add, subtract, multiply, divide
 
-def test_addition():
+def test_add():
     '''Test that addition function works'''
     assert add(2,2) == 4
 
-def test_subtraction():
+def test_subtract():
     '''Test that subtraction function works'''
     assert subtract(2,2) == 0
 
@@ -25,4 +25,4 @@ def test_divide_by_zero():
         pass
     else:
         assert False, "Failed to raise ZeroDivisionError"
-        
+
