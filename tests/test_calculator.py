@@ -25,4 +25,3 @@ def test_divide_by_zero():
         pass
     else:
         assert False, "Failed to raise ZeroDivisionError"
-
