@@ -1,19 +1,15 @@
-"""Module providing basic arithmetic operations."""
-
-def add(a,b):
-    """Add two numbers, where a and b are numeric and a numeric number is returned"""
+from decimal import Decimal
+# Define the functions with type hints
+def add(a: Decimal, b: Decimal) -> Decimal:
     return a + b
 
-def subtract(a,b):
-    """Subtract two numbers, where a and b are numeric and a numeric number is returned"""
+def subtract(a: Decimal, b: Decimal) -> Decimal:
     return a - b
 
-def multiply(a,b):
-    """Multiply two number, where a and b are numeric and a numeric number is returned"""
+def multiply(a: Decimal, b: Decimal) -> Decimal:
     return a * b
 
-def divide(a,b):
-    """Divide two numbers, where a and b are numeric, b must not be zero and a number is returned"""
+def divide(a: Decimal, b: Decimal) -> Decimal:
     if b == 0:
         raise ZeroDivisionError("Division by zero is not allowed.")
     return a / b
