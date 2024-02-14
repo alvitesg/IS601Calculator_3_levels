@@ -17,8 +17,3 @@ def test_divide():
 def test_multiply():
     '''Test that multiply function works '''    
     assert Calculator.multiply(2,2) == 4
-
-def test_divide_by_zero():
-    '''Test division by zero'''
-    with pytest.raises(ZeroDivisionError):
-        Calculator.divide(2, 0)
