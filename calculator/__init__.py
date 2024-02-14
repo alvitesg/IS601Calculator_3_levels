@@ -1,15 +1,23 @@
-"""Calculator class that provides a simple interface for performing arithmetic operations (addition, subtraction, multiplication, division) on Decimal numbers. The class uses static methods, demonstrating a functional approach within an object-oriented context. 
-Each operation method creates a Calculation object, performs the calculation, adds it to a history of calculations, and then returns the result."""
+"""Calculator class that provides a simple interface for performing arithmetic operations 
+(addition, subtraction, multiplication, division) on Decimal numbers. 
+The class uses static methods, demonstrating a functional approach within 
+an object-oriented context. 
+Each operation method creates a Calculation object, performs the calculation, 
+adds it to a history of calculations, and then returns the result."""
 
+# pylint: disable=missing-function-docstring, unnecessary-dunder-call, invalid-name, line-too-long, unused-argument, redefined-outer-name
 # Import necessary modules and classes
+from decimal import Decimal  # For high-precision arithmetic
+from typing import Callable  # For type hinting callable objects
 from calculator.calculations import Calculations  # Manages history of calculations
 from calculator.operations import add, subtract, multiply, divide  # Arithmetic operations
 from calculator.calculation import Calculation  # Represents a single calculation
-from decimal import Decimal  # For high-precision arithmetic
-from typing import Callable  # For type hinting callable objects
+
 
 # Definition of the Calculator class
+
 class Calculator:
+    """simple calculator class"""
     @staticmethod
     def _perform_operation(a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
         """Create and perform a calculation, then return the result."""

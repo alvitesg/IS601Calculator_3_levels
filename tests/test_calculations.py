@@ -1,5 +1,5 @@
 '''Test Calculations Class'''
-
+# pylint: disable=unnecessary-dunder-call, invalid-name, line-too-long, unused-argument, redefined-outer-name
 # Correct the import order by placing standard library imports before third-party library imports,
 # adhering to PEP 8 guidelines for import ordering.
 from decimal import Decimal
@@ -27,7 +27,7 @@ def setup_calculations():
     Calculations.add_calculation(Calculation(Decimal('10'), Decimal('5'), add))
     Calculations.add_calculation(Calculation(Decimal('20'), Decimal('3'), subtract))
 
-def test_add_calculation(setup_calculations):
+def test_add_calculation(setup_calculations: None):
     """Test adding a calculation to the history."""
     # Create a new Calculation object to add to the history.
     calc = Calculation(Decimal('2'), Decimal('2'), add)
@@ -37,7 +37,7 @@ def test_add_calculation(setup_calculations):
     # if the latest calculation in the history matches the one we added.
     assert Calculations.get_latest() == calc, "Failed to add the calculation to the history"
 
-def test_get_history(setup_calculations):
+def test_get_history(setup_calculations: None):
     """Test retrieving the entire calculation history."""
     # Retrieve the calculation history.
     history = Calculations.get_history()
@@ -45,14 +45,14 @@ def test_get_history(setup_calculations):
     # which matches our setup in the setup_calculations fixture.
     assert len(history) == 2, "History does not contain the expected number of calculations"
 
-def test_clear_history(setup_calculations):
+def test_clear_history(setup_calculations: None):
     """Test clearing the entire calculation history."""
     # Clear the calculation history.
     Calculations.clear_history()
     # Assert that the history is empty by checking its length.
     assert len(Calculations.get_history()) == 0, "History was not cleared"
 
-def test_get_latest(setup_calculations):
+def test_get_latest(setup_calculations: None):
     """Test getting the latest calculation from the history."""
     # Retrieve the latest calculation from the history.
     latest = Calculations.get_latest()
@@ -61,7 +61,7 @@ def test_get_latest(setup_calculations):
     # in the setup_calculations fixture.
     assert latest.a == Decimal('20') and latest.b == Decimal('3'), "Did not get the correct latest calculation"
 
-def test_find_by_operation(setup_calculations):
+def test_find_by_operation(setup_calculations: None):
     """Test finding calculations in the history by operation type."""
     # Find all calculations with the 'add' operation.
     add_operations = Calculations.find_by_operation("add")

@@ -4,11 +4,12 @@ This module contains tests for the calculator operations and Calculation class.
 
 # Import statements:
 # Disable specific pylint warnings that are not relevant for this test file.
-# Import the Decimal class for precise decimal arithmetic, which is especially useful in financial calculations.
+# Import the Decimal class for precise decimal arithmetic, useful in financial calcs
 # Import pytest for writing test cases.
 # Import the Calculation class from the calculator package to test its functionality.
 # Import the arithmetic operation functions (add, subtract, multiply, divide) to be tested.
-# pylint: disable=unnecessary-dunder-call, invalid-name
+# pylint: disable=unnecessary-dunder-call, invalid-name, line-too-long, unused-argument
+# pylint: disable=trailing-whitespace, missing-module-docstring, unused-import
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
@@ -65,4 +66,3 @@ def test_divide_by_zero():
     calc = Calculation(Decimal('10'), Decimal('0'), divide)  # Create a Calculation instance with a zero divisor.
     with pytest.raises(ValueError, match="Cannot divide by zero"):  # Expect a ValueError to be raised.
         calc.perform()  # Attempt to perform the calculation, which should trigger the ValueError.
-        

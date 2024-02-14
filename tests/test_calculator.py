@@ -1,6 +1,5 @@
 '''My Calculator Test'''
 from calculator import Calculator
-import pytest
 
 def test_addition():
     '''Test that addition function works '''    

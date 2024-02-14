@@ -1,3 +1,4 @@
+# pylint: disable=unnecessary-dunder-call, invalid-name, line-too-long, unused-argument, redefined-outer-name
 # Import the Decimal class for precise decimal arithmetic
 from decimal import Decimal
 # Import Callable from typing to specify the operation as a callable type hint
@@ -7,13 +8,14 @@ from calculator.operations import add, subtract, multiply, divide
 
 # Definition of the Calculation class with type annotations for improved readability and safety
 class Calculation:
+    # pylint: disable=unnecessary-dunder-call, invalid-name, line-too-long, unused-argument, redefined-outer-name
     # Constructor method with type hints for parameters and the return type
     def __init__(self, a: Decimal, b: Decimal, operation: Callable[[Decimal, Decimal], Decimal]):
         # Initialize the first operand of the calculation
         self.a = a
         # Initialize the second operand of the calculation
         self.b = b
-        # Store the operation as a callable that takes two Decimals and returns a Decimal
+        # Store the ops as a callable that takes two Dec and returns a Dec
         # This allows for flexible assignment of any function that matches this signature (like add, subtract, etc.)
         self.operation = operation
     
@@ -36,3 +38,4 @@ class Calculation:
         # This method makes it easier to understand what the Calculation object represents when printed or logged
         # The operation.__name__ attribute is used to get the function's name for a more readable output
         return f"Calculation({self.a}, {self.b}, {self.operation.__name__})"
+    
